@@ -1,20 +1,20 @@
 import {useState} from 'react'
-const Input = ({ipset}) => {
-    const [address, setaddress] = useState('')
+
+const Input = ({trackIP}) => {
+    const [Address, setAddress] = useState('')
     const onSubmit= (e) =>{
         e.preventDefault()
-        if(!address)
+        if(!Address)
         {
-            alert('Please enter Ip address')
+            alert('Please enter Ip Address')
             return 
         }
-        // console.log(address)
-        ipset({address})
-        setaddress('')
+        trackIP(Address)
+        setAddress('')
     }
     return (
-        <form onSubmit={onSubmit}>
-            <input type='text' placeholder='Ip address' value={address} onChange={(e) =>setaddress(e.target.value)}/>   
+        <form className = "ip-form" onSubmit={onSubmit}>
+            <input type='text' placeholder='Ip Address' value={Address} onChange={(e) =>setAddress(e.target.value)}/>   
             <input type='submit' value='Search'/>
         </form>
     )
