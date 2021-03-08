@@ -12,7 +12,7 @@ const MapContainer = ({latitude, longitude}) => {
   
   return (
      <LoadScript
-       googleMapsApiKey='AIzaSyCxji9Emp6vrPqPJjkUR2pJ0_xCedyC2K8'>
+       googleMapsApiKey='AIzaSyAz8Z65K53O43rbopljSaNDNE5wGZzA17U'>
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={13}
